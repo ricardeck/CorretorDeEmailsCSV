@@ -220,6 +220,11 @@ public class Window extends JFrame {
 					else if (txtEmail.getText().indexOf("@") == -1) {
 						JOptionPane.showMessageDialog(null, "Campo email Inválido");
 					}
+					else {
+						program.addEmail(txtEmail.getText());
+						JOptionPane.showMessageDialog(null, "Email adicionado");
+						txtEmail.setText("");
+					}
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
